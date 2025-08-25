@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_RAP100_ATRAV_IM'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_RAP100_ATRAV_IM'
+  }
+}
+define service ZUI_RAP100_ATRAV_IM_O4 provider contracts odata_v4_ui {
+  expose ZC_RAP100_ATRAV_IM as Travel;
+}

@@ -1,0 +1,142 @@
+@Metadata.layer: #CORE
+@UI: {
+    headerInfo: {
+        typeName: 'Travel',
+        typeNamePlural: 'Travels',
+        imageUrl: 'Attachment',
+        description: { type: #STANDARD, value: 'TravelID' }
+    }
+}
+annotate view ZC_RAP100_ATRAV_IM with
+{
+  @UI.facet: [ {
+    label: 'General Information',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10 ,
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 10
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  TravelId;
+
+  @UI.identification: [ {
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 20
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  AgencyId;
+
+  @UI.identification: [ {
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 30
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  CustomerId;
+
+  @UI.identification: [ {
+    position: 40
+  } ]
+  @UI.lineItem: [ {
+    position: 40
+  } ]
+  BeginDate;
+
+  @UI.identification: [ {
+    position: 50
+  } ]
+  @UI.lineItem: [ {
+    position: 50
+  } ]
+  EndDate;
+
+  @UI.identification: [ {
+    position: 60
+  } ]
+  BookingFee;
+
+  @UI.identification: [ {
+    position: 70
+  } ]
+  TotalPrice;
+
+  @UI.identification: [ {
+    position: 80
+  } ]
+  @UI.lineItem: [ {
+    position: 80
+  } ]
+  Description;
+
+  @UI: {
+      lineItem:       [ { position: 100, importance: #HIGH }
+                        ,{ type: #FOR_ACTION, dataAction: 'copyTravel', label: 'Copy Travel' }
+                        ,{ type: #FOR_ACTION, dataAction: 'acceptTravel', label: 'Accept Travel' }
+                        ,{ type: #FOR_ACTION, dataAction: 'rejectTravel', label: 'Reject Travel' }
+           ],
+      identification: [ { position: 100 }
+                       ,{ type: #FOR_ACTION, dataAction: 'deductDiscount', label: 'Deduct Discount' }
+                       ,{ type: #FOR_ACTION, dataAction: 'acceptTravel', label: 'Accept Travel' }
+                       ,{ type: #FOR_ACTION, dataAction: 'rejectTravel', label: 'Reject Travel' }
+           ],
+    textArrangement: #TEXT_ONLY
+  }
+  OverallStatus;
+
+  @UI.identification: [ {
+    position: 100
+  } ]
+  Attachment;
+
+  @UI.identification: [ {
+    position: 110
+  } ]
+  @UI.hidden: true
+  MimeType;
+
+  @UI.identification: [ {
+    position: 120
+  } ]
+  @UI.hidden: true
+  FileName;
+
+  @UI.identification: [ {
+    position: 130
+  } ]
+  CreatedBy;
+
+  @UI.identification: [ {
+    position: 140
+  } ]
+  CreatedAt;
+
+  @UI.identification: [ {
+    position: 150
+  } ]
+  LocalLastChangedBy;
+
+  @UI.identification: [ {
+    position: 160
+  } ]
+  LocalLastChangedAt;
+
+  @UI.identification: [ {
+    position: 170
+  } ]
+  LastChangedAt;
+}
